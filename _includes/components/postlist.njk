@@ -4,7 +4,7 @@
 </style>
 
 <ol reversed class="postlist">
-	{% for post in postlist | reverse %}
+	{% for post in postlist %}
 	<li
 		class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}"
 	>

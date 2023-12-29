@@ -22,4 +22,15 @@ layout: layouts/base.njk
 	{{ content | safe }}
 </article>
 
-<a id="bottom_link" href="/">go home</a>
+{% set currentCollection = page.url.split("/")[1] %}
+{% set previousPost = collections[currentCollection] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[currentCollection] | getNextCollectionItem(page) %}
+
+<div class="collection-controls">
+	{% if previousPost %}
+		<a href="{{ previousPost.url }}" class="previous">Previous</a>
+	{% endif %}
+	{% if nextPost %}
+		<a href="{{ nextPost.url }}" class="next">Next</a>
+	{% endif %}
+</div>

@@ -7,8 +7,7 @@ section {
 	font-size: 1.25rem;
 }
 
-article *,
-#bottom_link {
+article * {
 	margin-block: 1rem;
 }
 
@@ -22,7 +21,7 @@ article img {
 	font-style: italic;
 }
 
-.post-author { 
+.post-author {
 	font-weight: bold;
 }
 
@@ -32,6 +31,21 @@ article img {
 		font-size: 1.125rem;
 	}
 }
+
+.collection-controls {
+	width: 100%;
+	display: flex;
+	margin-block: 1rem;
+}
+
+.collection-controls .next {
+	margin-left: auto;
+}
+.collection-controls .previous {
+	margin-right: auto;
+}
+
+/* Page content styles */
 
 .no-margin-block * {
 	margin-block: 0rem;
