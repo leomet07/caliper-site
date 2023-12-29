@@ -1,0 +1,10 @@
+{% set navbarcss %} {% include "styles/navbar.css" %} {% endset %}
+<style>
+	{{ navbarcss | cssmin | safe }}
+</style>
+
+<nav>
+    <a href="/">CALIPER</a>
+    <a href="/">Issues</a>
+    <a href="/">About Us</a>
+</nav>

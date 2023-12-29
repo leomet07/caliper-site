@@ -1,0 +1,57 @@
+section {
+	margin-bottom: 1rem;
+}
+
+article,
+section {
+	font-size: 1.25rem;
+}
+
+article *,
+#bottom_link {
+	margin-block: 1rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+article img {
+	display: block;
+	max-width: 100%;
+	font-style: italic;
+}
+
+.post-author { 
+	font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+	article,
+	section {
+		font-size: 1.125rem;
+	}
+}
+
+.no-margin-block * {
+	margin-block: 0rem;
+}
+
+.no-margin-block {
+	margin-bottom: 2rem;
+}
+
+.drop-shadow {
+	box-shadow: 0 0 0 100vmax var(--background-color);
+	clip-path: inset(-0.5rem -0.5rem);
+}
+
+.fill {
+	background-color: var(--background-color);
+}
+
+.text-right {
+	margin-left: auto;
+	width: fit-content;
+	text-align: right;
+}

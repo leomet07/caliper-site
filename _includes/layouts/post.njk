@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+
+{% set postcss %} {% include "styles/post.css" %} {% endset %}
+<style>
+	{{ postcss | cssmin | safe }}
+</style>
+
+<section>
+	<span class="post-issue">
+		{{ formattedIssue }}
+	</span>
+	<h1>{{ title }}</h1>
+
+	<p class="post-author">
+		{{ author }}
+	</p>
+</section>
+
+<article>
+	{{ content | safe }}
+</article>
+
+<a id="bottom_link" href="/">go home</a>

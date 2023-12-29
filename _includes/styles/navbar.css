@@ -1,0 +1,26 @@
+nav {
+	width: 92%;
+	max-width: 1000px;
+	margin-inline: auto;
+	font-size: 1.25rem;
+	padding-block: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	border-bottom: 1px solid var(--accent);
+}
+
+nav a:first-child {
+	font-size: 4rem;
+	margin-right: auto;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+	nav {
+		padding-block: 1rem;
+	}
+	nav a:first-child {
+		font-size: 2rem;
+	}
+}

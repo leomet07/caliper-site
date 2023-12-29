@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* --text: #f8f8fc;
+	--background: #120e25;
+	--primary: #cba2dd;
+	--secondary: #df78a6; */
+	--accent: #214e5c;
+
+	/* --text-color-link: #1493fb;
+	--text-color-link-active: #6969f7;
+	--text-color-link-visited: #a6a6f8; */
+}
+
+body {
+	/* color: var(--text); */
+	font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+	font-weight: normal;
+	font-size: 16px;
+	background-color: var(--background);
+}
+
+#main_content {
+	width: 92%;
+	max-width: 1000px;
+	margin-inline: auto;
+	min-height: 100dvh;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a[href] {
+	color: var(--accent);
+}
+
+li {
+	list-style-type: none;
+}
+
+#home_page_title {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}

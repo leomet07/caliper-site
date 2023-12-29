@@ -1,0 +1,32 @@
+{% set postlistcss %} {% include "styles/postlist.css" %} {% endset %}
+<style>
+	{{ postlistcss | cssmin | safe }}
+</style>
+
+<ol reversed class="postlist">
+	{% for post in postlist | reverse %}
+	<li
+		class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}"
+	>
+		<div>
+			<span class="post-issue">
+				{{ post.data.formattedIssue }}
+			</span>
+			<h2>
+				<a href="{{ post.url }}" class="postlist-link">
+					{% if post.data.title %}
+					{{ post.data.title }}
+					{% else %}
+					<code>{{ post.url }}</code>
+					{% endif %}
+				</a>
+			</h2>
+			<p class="post-author">
+				{{ post.data.author }}
+			</p>
+
+			
+		</div>
+	</li>
+	{% endfor %}
+</ol>
