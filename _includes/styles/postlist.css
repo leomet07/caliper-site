@@ -1,6 +1,15 @@
+.postlist {
+	max-width: 750px;
+	margin-inline: auto;
+}
+
 .postlist-item {
 	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
+
 .post-author {
 	font-weight: bold;
 	font-size: 1.125rem;
@@ -8,4 +17,14 @@
 
 .post-issue {
 	display: none;
+}
+
+.post-page {
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.postlist-item {
+		display: block;
+	}
 }

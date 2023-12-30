@@ -24,9 +24,10 @@
 			<p class="post-author">
 				{{ post.data.author }}
 			</p>
-
-			
 		</div>
+		<span class="post-page">
+			Page&nbsp;{{ post.data.index + 1 }}
+		</span>
 	</li>
 	{% endfor %}
 </ol>
