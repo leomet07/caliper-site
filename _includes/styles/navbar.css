@@ -10,10 +10,14 @@ nav {
 	border-bottom: 1px solid var(--accent);
 }
 
+nav div {
+	margin-right: auto;
+}
+
 nav a:first-child {
 	font-size: 4rem;
-	margin-right: auto;
 	text-decoration: none;
+	line-height: 1;
 }
 
 @media screen and (max-width: 1000px) {
@@ -23,4 +27,9 @@ nav a:first-child {
 	nav a:first-child {
 		font-size: 2rem;
 	}
+
+	nav div p {
+		display: none;
+	}
 }
+

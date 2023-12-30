@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+---
+
+{% set issuecss %} {% include "styles/issue.css" %} {% endset %}
+<style>
+	{{ issuecss | cssmin | safe }}
+</style>
+
+
+<h1 class="center-heading">Winter 2023 Issue</h1>
+{% set postlist = collections.winter2023 %} {% include "components/postlist.njk" %}

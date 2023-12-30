@@ -1,0 +1,26 @@
+.issues {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.issues h2 {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.issues {
+		display: block;
+	}
+
+	.issues div {
+		margin-bottom: 1rem;
+	}
+}
+
+.issue-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
