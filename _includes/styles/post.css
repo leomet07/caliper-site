@@ -36,6 +36,7 @@ article img {
 	width: 100%;
 	display: flex;
 	margin-block: 1rem;
+	font-size: 1.25rem;
 }
 
 .collection-controls .next {

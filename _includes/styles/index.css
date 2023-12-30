@@ -9,6 +9,13 @@
 	text-align: center;
 }
 
+.issue-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 1.25rem;
+}
+
 @media (max-width: 768px) {
 	.issues {
 		display: block;
@@ -17,10 +24,8 @@
 	.issues div {
 		margin-bottom: 1rem;
 	}
-}
 
-.issue-links {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	.issue-links {
+		font-size: 1.2rem;
+	}
 }
