@@ -1,8 +1,8 @@
-{% set navbarcss %} {% include "styles/navbar.css" %} {% endset %}
+{% set navbarcss %}
+{% include "styles/navbar.css" %}
+{% endset %}
 <style>
-	{{ navbarcss | cssmin | safe }}
-</style>
-
+    {{navbarcss | cssmin | safe}}</style>
 <nav>
     <div>
         <a href="/">CALIPER</a>

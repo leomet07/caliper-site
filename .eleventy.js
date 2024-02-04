@@ -1,6 +1,9 @@
 const CleanCSS = require("clean-css");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("**/*.jpg");
+	eleventyConfig.addPassthroughCopy("**/*.png");
+	eleventyConfig.addPassthroughCopy("**/*.ttf");
+	eleventyConfig.addPassthroughCopy("**/*.pdf");
 
 	eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;

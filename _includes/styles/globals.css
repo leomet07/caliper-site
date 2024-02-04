@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "DecoCard";
+	src: url("/fonts/DecoCard/DecoCard.ttf");
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -26,7 +31,7 @@ body {
 
 #main_content {
 	width: 92%;
-	max-width: 1000px;
+	max-width: 1200px;
 	margin-inline: auto;
 	min-height: 100dvh;
 	padding-top: 10px;

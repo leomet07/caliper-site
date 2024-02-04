@@ -2,15 +2,20 @@
 layout: layouts/base.njk
 ---
 
-{% set indexcss %} {% include "styles/index.css" %} {% endset %}
+{% set indexcss %}
+{% include "styles/index.css" %}
+{% endset %}
 <style>
-	{{ indexcss | cssmin | safe }}
-</style>
-
-
+    {{indexcss | cssmin | safe}}</style>
+<section>
+    {%- from 'components/viewer.macro.njk' import viewer %}
+    {{ viewer({ issue: "winter2024", max : 38, min : 1}) }}
+</section>
 <section class="issues">
     <div>
-        <img src="/winter2023/winter-2023-cover-by-shivani-manimaran.jpg" alt="The cover of the Winter 2023 Issue by Shivani Manimaran" />
+        <img
+            src="/winter2023/winter-2023-cover-by-shivani-manimaran.jpg"
+            alt="The cover of the Winter 2023 Issue by Shivani Manimaran"/>
         <h2>Winter 2023 Issue</h2>
         <div class="issue-links">
             <a href="/winter2023/the-patron-saints-of-hydromorphone-and-jobbers/">Start at Page One</a>
@@ -18,7 +23,9 @@ layout: layouts/base.njk
         </div>
     </div>
     <div>
-        <img src="/spring2023/spring-2023-cover-by-shivani-manimaran.jpg" alt="The cover of the Spring 2023 Issue by Shivani Manimaran" />
+        <img
+            src="/spring2023/spring-2023-cover-by-shivani-manimaran.jpg"
+            alt="The cover of the Spring 2023 Issue by Shivani Manimaran"/>
         <h2>Spring 2023 Issue</h2>
         <div class="issue-links">
             <a href="">Start at Page One</a>
