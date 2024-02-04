@@ -1,36 +1,3 @@
-.issues {
-	margin-top: 2rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
-	margin-bottom: 2rem;
-}
-
-.issues h2 {
-	text-align: center;
-}
-
-.issue-links {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	font-size: 1.25rem;
-}
-
-@media (max-width: 768px) {
-	.issues {
-		display: block;
-	}
-
-	.issues div {
-		margin-bottom: 1rem;
-	}
-
-	.issue-links {
-		font-size: 1.2rem;
-	}
-}
-
 #new-issue-card {
 	background-color: var(--accent);
 	color: white;
