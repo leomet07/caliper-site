@@ -1,0 +1,19 @@
+main {
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+section {
+	margin-bottom: 1rem;
+}
+
+.indent {
+	text-indent: 2rem;
+}
+
+@media (max-width: 768px) {
+	main {
+		font-size: 1.1rem;
+		line-height: 1.25;
+	}
+}

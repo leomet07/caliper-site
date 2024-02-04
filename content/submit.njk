@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+
+{% set infopage %}
+{% include "styles/infopage.css" %}
+{% endset %}
+<style>
+    {{infopage | cssmin | safe}}</style>
+<main>
+    <section id="about_section">
+        <h1>Submitting to Caliper</h1>
+        <p class="indent">Caliper Literary Magazine opens its call for submissions at the end of each semester. All Stuyvesant
+            students are welcome to submit, but only Caliper members are guaranteed to be published. Caliper members are expected to
+            attend at least three meetings per semester. Towards the end of each semester, Caliper will attach its submission form
+            here on the website, as well as send out emails, post on social media, hang up flyers around the school, and announce
+            deadlines on the morning announcements.
+        </p>
+    </section>
+    <section>
+        <h2>Submission Requirements</h2>
+        <h4>General:</h4>
+        <p>Title your document or image with FirstNameLastName__TitleOfPiece__Genre</p>
+        <p>Ex: ScottFitzgerald__TheGreatGatsby__Novel</p>
+        <h4>Writing:</h4>
+        <p>Please upload a google doc and give editors commenting access.</p>
+        <p>Writing submissions are capped at 1000 words. For pieces longer than this, you may submit an excerpt.</p>
+        <h4>Art:</h4>
+        <p>Please upload a professional image of your artwork (image is in focus, clear lighting, good angle, etc…)
+        </p>
+        <p>If this is not possible, submit the best photo that you can and if accepted, we'll give you the opportunity to come
+            to Mr. Wrigley's class after school one day and get your piece professionally photographed.
+        </p>
+    </section>
+</main>

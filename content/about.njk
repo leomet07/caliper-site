@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+---
+
+{% set infopage %}
+{% include "styles/infopage.css" %}
+{% endset %}
+<style>
+    {{infopage | cssmin | safe}}</style>
+<main>
+    <section id="about_section">
+        <h1>About Caliper</h1>
+        <p class="indent">Caliper Literary Magazine is Stuyvesant High School's oldest publication, dating back to 1906. With
+            over a century of literary and artistic development, Caliper has cemented a place in Stuyvesant's creative community. In
+            a school often focused on STEM, Caliper aims to create and maintain a supportive haven for writers and artists to
+            collaborate, grow, and inspire one another. Aside from its biannual publication, Caliper offers weekly workshops led by
+            editors in art and creative writing, often focusing on specific genres, mediums, techniques, and prompts. Recent
+            workshops have touched on ekphrastic poetry, surrealism, collage, and short stories. Each semester culminates in a
+            printed edition of student work, curated by Caliper editors. All students are invited to submit to the magazine, and are
+            welcome to attend feedback sessions in the weeks leading up to the submission deadline. Caliper is grateful for funding
+            from the Stuyvesant High School Parents' Association.
+        </p>
+    </section>
+    <section>
+        <h2>Caliper Staff</h2>
+        <p>
+            <b>Editors-in-Chief:</b>
+            Zoë Feigelson ('25)*, Lindy Fu ('25)*, Elizabeth Harris ('24), Ivy Huang ('24), and Dalia Levanon
+            ('24)
+        </p>
+        <p>
+            <b>Editor of Art:</b>
+            Elizabeth Chao ('26)*</p>
+        <p>
+            <b>Editor of Writing:</b>
+            Ada Gordon ('26)*</p>
+        <p>
+            <b>Web Editor:</b>
+            Lenny Metlitsky ('25)</p>
+        <p>
+            <b>Faculty Advisor:</b>
+            William Wrigley</p>
+        <p>*Editor-in-training</p>
+    </section>
+    <section>
+        <h2>Website Information</h2>
+        <p>This website is open source, with the source code available at
+            <a href="https://github.com/leomet07/caliper-site">GitHub</a>. Please report any issues
+            <a href="https://github.com/leomet07/caliper-site/issues">here</a>.</p>
+    </section>
+</main>
