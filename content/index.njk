@@ -7,11 +7,17 @@ layout: layouts/base.njk
 {% endset %}
 <style>
     {{indexcss | cssmin | safe}}</style>
+<hgroup id="new-issue-card">
+    <h2>Winter 2024 Issue</h2>
+    <p>
+        Our first hybrid (digital + print) issue is now available!
+    </p>
+</hgroup>
 <section>
     {%- from 'components/viewer.macro.njk' import viewer %}
     {{ viewer({ issue: "winter2024", max : 38, min : 1}) }}
 </section>
-<section class="issues">
+{# <section class="issues">
     <div>
         <img
             src="/winter2023/winter-2023-cover-by-shivani-manimaran.jpg"
@@ -32,4 +38,4 @@ layout: layouts/base.njk
             <a href="">Table of Contents</a>
         </div>
     </div>
-</section>
+</section> #}
