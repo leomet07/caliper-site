@@ -4,36 +4,83 @@ nav {
 	margin-inline: auto;
 	font-size: 1.25rem;
 	padding-block: 2rem;
+	border-bottom: 1px solid var(--accent);
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
-	border-bottom: 1px solid var(--accent);
 }
 
-nav div {
+.title-container {
+	margin-block: auto;
 	margin-right: auto;
+	display: inline;
 }
 
-nav a:first-child {
+.caliper-title {
 	font-size: 4rem;
 	text-decoration: none;
 	line-height: 1;
 	font-family: "DecoCard";
 }
 
+#menu {
+	max-height: 0;
+	overflow-y: hidden;
+	transition: max-height 0.45s ease-in-out;
+}
+
+#open-icon svg {
+	width: 30px;
+	height: 34px;
+}
+
+#close-icon svg {
+	width: 30px;
+	height: 34px;
+}
+
+.btn-icon {
+	display: none;
+	margin-block: auto;
+	color: var(--accent);
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
 @media screen and (max-width: 1000px) {
+	#close-icon {
+		display: none;
+	}
+	.btn-icon {
+		display: block;
+	}
+	.desktop-link {
+		display: none;
+	}
+	#menu {
+		width: 100%;
+		display: block;
+	}
+	#menu a {
+		display: block;
+		text-align: center;
+		padding-block: 1rem;
+		font-size: 1.5rem;
+	}
+
 	nav {
 		padding-block: 1rem;
 	}
-	nav a:first-child {
+	.caliper-title {
 		font-size: 2rem;
 	}
 
-	nav div {
+	.title-container {
 		height: 30px; /* 3px shorter so bottom of CALIPER text does not cause weird shift */
 	}
 
-	nav div p {
+	.title-container p {
 		display: none;
 	}
 }

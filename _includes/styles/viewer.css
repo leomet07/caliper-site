@@ -54,7 +54,7 @@
 	gap: 0.25rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	.viewer-desktop {
 		display: none;
 	}
