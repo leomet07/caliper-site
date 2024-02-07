@@ -14,10 +14,20 @@ module.exports = function (eleventyConfig) {
 			.getFilteredByTag("winter2023")
 			.sort((a, b) => a.data.index - b.data.index);
 	});
+	eleventyConfig.addCollection("winter2024", function (collection) {
+		return collection
+			.getFilteredByTag("winter2024")
+			.sort((a, b) => a.data.index - b.data.index);
+	});
 
 	eleventyConfig.addCollection("contributors", function (collectionApi) {
 		const contributors = {};
-		collectionApi.getFilteredByTag("winter2023", "spring2023", "winter2024").forEach(element => {
+		const elements = [
+			...collectionApi.getFilteredByTag("winter2023"),
+			...collectionApi.getFilteredByTag("spring2023"),
+			...collectionApi.getFilteredByTag("winter2024"),
+		]
+		elements.forEach(element => {
 			const author_slug = element.data.author_slug;
 			if (!(author_slug in contributors)) {
 				contributors[author_slug] = {
