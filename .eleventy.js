@@ -18,7 +18,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection("contributors", function (collectionApi) {
 		const contributors = {};
 		collectionApi.getFilteredByTag("winter2023", "spring2023", "winter2024").forEach(element => {
-			console.log(element)
 			const author_slug = element.data.author_slug;
 			if (!(author_slug in contributors)) {
 				contributors[author_slug] = {
@@ -29,10 +28,13 @@ module.exports = function (eleventyConfig) {
 			}
 			contributors[author_slug].pieces.push({
 				slug: element.fileSlug, // piece slug
-				title: element.data.title
+				url: element.url,
+				title: element.data.title,
 			}); // push the piece slug into pieces
 		});
-		return contributors;
+		const contributorsEntries = Object.entries(contributors);
+		const sortedContributorEntries = contributorsEntries.sort((a, b) => a[0].localeCompare(b[0])).map(v => v[1]);
+		return sortedContributorEntries;
 	});
 
 	return {

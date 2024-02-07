@@ -1,0 +1,14 @@
+.contributors-container {
+    font-size: 1.15rem;
+    margin-block: 1rem;
+    text-align: center;
+
+    background-color: var(--accent-light);
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.contributors-container .info {
+    margin-bottom: 0.5rem;
+}
