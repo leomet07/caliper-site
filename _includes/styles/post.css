@@ -42,6 +42,7 @@ article img {
 .collection-controls .next {
 	margin-left: auto;
 }
+
 .collection-controls .previous {
 	margin-right: auto;
 }
@@ -69,4 +70,8 @@ article img {
 	margin-left: auto;
 	width: fit-content;
 	text-align: right;
+}
+
+pre {
+	font-family: var(--primary-font);
 }

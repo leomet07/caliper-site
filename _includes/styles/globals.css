@@ -25,7 +25,8 @@
 
 body {
 	/* color: var(--text); */
-	font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+	--primary-font: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+	font-family: var(--primary-font);
 	font-weight: normal;
 	font-size: 16px;
 	background-color: var(--background);
