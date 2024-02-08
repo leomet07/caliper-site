@@ -75,3 +75,7 @@ article img {
 pre {
 	font-family: var(--primary-font);
 }
+
+br {
+	margin-block: 0;
+}
