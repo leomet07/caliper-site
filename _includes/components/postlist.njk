@@ -1,33 +1,34 @@
-{% set postlistcss %} {% include "styles/postlist.css" %} {% endset %}
+{% set postlistcss %}
+{% include "styles/postlist.css" %}
+{% endset %}
 <style>
-	{{ postlistcss | cssmin | safe }}
-</style>
-
+    {{postlistcss | cssmin | safe}}</style>
 <ol reversed class="postlist">
-	{% for post in postlist %}
-	<li
-		class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}"
-	>
-		<div>
-			<span class="post-issue">
-				{{ post.data.formattedIssue }}
-			</span>
-			<h2>
-				<a href="{{ post.url }}" class="postlist-link">
-					{% if post.data.title %}
-					{{ post.data.title }}
-					{% else %}
-					<code>{{ post.url }}</code>
-					{% endif %}
-				</a>
-			</h2>
-			<p class="post-author">
-				{{ post.data.author }}
-			</p>
-		</div>
-		<span class="post-page">
-			Page&nbsp;{{ post.data.index + 1 }}
-		</span>
-	</li>
-	{% endfor %}
+    <p class="page-note">Please note that these page numbers are digital and do not match the print issue. For the print
+        page numbers, see the table of contents in the print view on
+        <a href="/">our homepage</a>.</p>
+    {% for post in postlist %}
+        <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+            <div>
+                <span class="post-issue">
+                    {{ post.data.formattedIssue }}
+                </span>
+                <h2>
+                    <a href="{{ post.url }}" class="postlist-link">
+                        {% if post.data.title %}
+                            {{ post.data.title }}
+                        {% else %}
+                            <code>{{ post.url }}</code>
+                        {% endif %}
+                    </a>
+                </h2>
+                <p class="post-author">
+                    {{ post.data.author }}
+                </p>
+            </div>
+            <span class="post-page">
+                Page&nbsp;{{ post.data.index + 1 }}
+            </span>
+        </li>
+    {% endfor %}
 </ol>
