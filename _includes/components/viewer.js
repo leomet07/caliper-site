@@ -22,7 +22,7 @@ function desktopModify(direction) {
 	const lastPage = Number(params.max);
 	if ((currentPage === 1 && direction === -1) || (currentPage >= lastPage && direction === 1)) return;
 	if (currentPage === 1 && direction === 1) {
-		currentPage = 2; 
+		currentPage = 2;
 	} else if (direction === 1) {
 		currentPage = Math.min(currentPage + 2, lastPage);
 	} else if (direction === -1) {
@@ -30,7 +30,6 @@ function desktopModify(direction) {
 	}
 	updateDesktopImages();
 }
-
 
 function mobileModify(mod) {
 	const mobilesrc = mobileviewer.getAttribute("src");

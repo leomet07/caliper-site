@@ -4,6 +4,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("**/*.png");
 	eleventyConfig.addPassthroughCopy("**/*.ttf");
 	eleventyConfig.addPassthroughCopy("**/*.pdf");
+	eleventyConfig.addPassthroughCopy("content/assets/favicon.ico");
+
+
 
 	eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;
