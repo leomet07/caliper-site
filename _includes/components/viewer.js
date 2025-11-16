@@ -5,6 +5,18 @@ let mobileviewer = document.getElementById("viewer-mobile-image");
 let preview = document.querySelector(".viewer-preview");
 let currentPage = 1;
 
+// Preload all images now to avoid glitch
+const imageCache = [];
+function preloadImages() {
+	const maxPage = Number(params.max);
+	for (let i = 1; i <= maxPage; i++) {
+		const img = new Image();
+		img.src = `/${params.issue}/images/${params.issue}-${i}.jpg`;
+		imageCache.push(img);
+	}
+}
+preloadImages();
+
 document
 	.getElementById("desktop-right-arrow")
 	.addEventListener("click", () => desktopModify(1));
