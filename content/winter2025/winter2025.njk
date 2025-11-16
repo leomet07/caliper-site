@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+title: Winter 2025 Issue
+---
+
+<section>
+    {%- from 'components/viewer.macro.njk' import viewer %}
+    {{ viewer({ issue: "winter2025", max: 32, min: 1 }) }}
+</section>
