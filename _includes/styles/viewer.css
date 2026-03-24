@@ -67,35 +67,40 @@
 }
 
 @media screen and (max-width: 900px) {
-	.viewer-desktop {
-		display: none;
-	}
+    .viewer-desktop {
+        display: none;
+    }
+    .viewer-mobile {
+        display: flex;
+    }
+    #image-container-right,
+    #viewer-right {
+        display: none;
+    }
+    #desktop-left-arrow,
+    #desktop-right-arrow {
+        display: none;
+    }
+    .direction-sign {
+        width: 20px;
+    }
+    #mobile-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #viewer-mobile-image {
+        border-radius: var(--border-radius);
+    }
 
-	.viewer-mobile {
-		display: flex;
-	}
-
-	#image-container-right,
-	#viewer-right {
-		display: none;
-	}
-
-	#desktop-left-arrow,
-	#desktop-right-arrow {
-		display: none;
-	}
-
-	.direction-sign {
-		width: 20px;
-	}
-
-	#mobile-buttons {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	#viewer-mobile-image {
-		border-radius: var(--border-radius);
-	}
+    .viewer-mobile .image-container {
+        max-height: 75vh;
+        overflow: hidden;
+    }
+    .viewer-mobile .image-container img {
+				position: relative;
+        height: auto;
+        max-height: 75vh;
+        object-fit: contain;
+    }
 }

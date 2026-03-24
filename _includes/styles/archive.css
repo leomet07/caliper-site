@@ -38,7 +38,6 @@
 }
 
 .cover-wrapper {
-    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
