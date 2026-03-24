@@ -1,21 +1,206 @@
-#new-issue-card {
-	background-color: var(--accent);
-	color: white;
-	padding: 1rem;
-	text-align: center;
-	border-radius: 16px;
-	margin-bottom: 0.5rem;
+@font-face {
+    font-family: 'DecoCard';
+    src: url('/fonts/DecoCard/DecoCard.ttf') format('truetype');
 }
 
-#new-issue-card a {
-	color: white;
-	text-decoration: underline;
+.home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-#new-issue-card h2 {
-	font-size: 2rem;
+/* 1. Hero */
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
 }
 
-#new-issue-card p {
-	font-size: 1.1rem;
+.hero-left {
+    flex: 1;
+    max-width: 400px;
+}
+
+.hero-right {
+    flex: 1.2;
+    text-align: left;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+}
+
+.vibe-title {
+    font-family: 'DecoCard', serif;
+    font-size: 5.5rem;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.tagline {
+    font-family: 'Helvetica Neue', Arial, sans-serif ;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    display: block;
+    border-bottom: 2px solid
+    padding-bottom: 0.5rem;
+}
+
+.mission-statement p {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 850px) {
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-right {
+        text-align: center;
+    }
+    .tagline {
+        border-bottom: none;
+    }
+}
+
+/* Dividers */
+.brutalist-hr {
+    border: 0;
+    border-top: 4px solid #000;
+    margin: 2rem 0;
+}
+
+.thin-hr {
+    flex: 1;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Submission */
+.submission-banner {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+
+.issue-call {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.deadline-note {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background: #fff;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Featured Issues */
+.recent-issue-showcase {
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.showcase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.showcase-title {
+    white-space: nowrap;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.issue-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.issue-preview {
+		flex: 1;
+    max-width: 30%;
+}
+
+.issue-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+.featured-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.issue-link:hover .featured-cover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.issue-date {
+    margin-top: 1.2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .issue-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .issue-preview {
+        max-width: 80%;
+        margin-bottom: 2rem;
+    }
 }

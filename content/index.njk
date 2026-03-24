@@ -3,19 +3,65 @@ layout: layouts/base.njk
 ---
 
 {% set indexcss %}
-{% include "styles/index.css" %}
+  {% include "styles/index.css" %}
 {% endset %}
 <style>
-    {{indexcss | cssmin | safe}}</style>
-<hgroup id="new-issue-card">
-    <h2>Winter 2024 Issue</h2>
-    <p>
-        Our first hybrid (digital + print) issue is now available! View the print issue below, or
-        <a href="/winter2024">read the web version</a>.
-    </p>
-</hgroup>
-<section>
-    {%- from 'components/viewer.macro.njk' import viewer %}
-    {{ viewer({ issue: "winter2024", max : 38, min : 1}) }}
-</section>
-{% include "components/contributors.njk" %}
+  {{ indexcss | cssmin | safe }}
+</style>
+<!-- submit for us -->
+  <section class="submission-banner">
+    <div class="banner-card">
+      <h2 class="issue-call">Spring 2026 Issue</h2>
+      <p>Prose, Poetry, Art, or Photography.</p>
+      <p class="deadline-note">Submissions are now open to all Stuyvesant students. Make sure to submit by April 15 11:59 pm.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYqjm3mTSZR_gJdpOJ79ly4wDN2ijo3_Ucpa4zHduXpEEERw/viewform?usp=header" class="cta-button">SUBMIT YOUR WORK</a>
+    </div>
+  </section>
+  <header class="home-hero">
+    <div class="hero-left">
+      <div class="logo-wrapper">
+         <img src="/assets/caliperlogo.png" alt="Caliper Logo" class="main-logo">
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="editorial-content">
+        <h1 class="vibe-title">CALIPER</h1>
+        <p class="tagline">The Literary & Arts Magazine of Stuyvesant <span class="est">Since 1906</span></p>
+
+        <div class="mission-statement">
+          <p>
+            For over a hundred years, <em>Caliper</em> has been the place where Stuyvesant students share what they’re creating. We put out two issues a year, once in the winter and another in the spring, produced entirely by students. Whether its a story you wrote from class or a painting you made at night, we ask you to submit your creative expression!
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="recent-issue-showcase">
+    <div class="showcase-header">
+        <hr class="thin-hr">
+        <h3 class="showcase-title">Recent Issues</h3>
+        <hr class="thin-hr">
+    </div>
+    <div class="issue-grid">
+        <div class="issue-preview">
+            <a href="/winter2026" class="issue-link">
+                <img src="/winter2026/winter2026-cover.jpg" alt="Winter 2026 Cover" class="featured-cover">
+                <h4 class="issue-date">Winter 2026</h4>
+            </a>
+        </div>
+        <div class="issue-preview">
+            <a href="/spring2025" class="issue-link">
+                <img src="/spring2025/spring2025-cover.jpg" alt="Spring 2025 Cover" class="featured-cover">
+                <h4 class="issue-date">Spring 2025</h4>
+            </a>
+        </div>
+        <div class="issue-preview">
+            <a href="/winter2025" class="issue-link">
+                <img src="/winter2025/winter2025-cover.jpg" alt="Winter 2025 Cover" class="featured-cover">
+                <h4 class="issue-date">Winter 2025</h4>
+            </a>
+        </div>
+    </div>
+  </section>
+</main>
