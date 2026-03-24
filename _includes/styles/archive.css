@@ -1,32 +1,82 @@
-.issues {
-	margin-top: 2rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
-	margin-bottom: 2rem;
+.archive-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    text-align: center;
 }
 
-.issues h2 {
-	text-align: center;
+.submission-banner {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 3rem;
+		text-align: left;
+    border-radius: 4px;
+    margin-bottom: 4rem;
 }
 
-.issue-links {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	font-size: 1.25rem;
+.issue-call {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+		font-weight: 500;
 }
 
-@media (max-width: 768px) {
-	.issues {
-		display: block;
-	}
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2rem;
+}
 
-	.issues div {
-		margin-bottom: 1rem;
-	}
+.issue-card {
+    display: flex;
+    flex-direction: column;
+}
 
-	.issue-links {
-		font-size: 1.2rem;
-	}
+.issue-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.cover-wrapper {
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.issue-card:hover .cover-wrapper {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.issue-date {
+    margin-top: 1.5rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .issues-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .issues-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .vibe-title {
+        font-size: 3.5rem;
+    }
 }
