@@ -19,7 +19,7 @@
 }
 
 .image-container {
-	aspect-ratio: 561 / 727; /* We know the page's aspect ratio, so prevent layout shift during load */
+	aspect-ratio: 561 / 727; 
 	width: 100%;
 	position: relative;
 }
@@ -88,19 +88,26 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
+        padding: 0.5rem 0;
     }
     #viewer-mobile-image {
         border-radius: var(--border-radius);
     }
 
     .viewer-mobile .image-container {
-        max-height: 75vh;
-        overflow: hidden;
-    }
-    .viewer-mobile .image-container img {
-				position: relative;
+        aspect-ratio: unset;
         height: auto;
-        max-height: 75vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .viewer-mobile .image-container img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
         object-fit: contain;
+        top: unset;
+        left: unset;
     }
 }

@@ -198,9 +198,20 @@
     .issue-grid {
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap; 
     }
     .issue-preview {
-        max-width: 80%;
+        max-width: 70%;
+        width: 70%;
         margin-bottom: 2rem;
+    }
+    .hero-left {
+        max-width: 200px;
+    }
+    .submission-banner {
+        padding: 2rem 1.2rem;
+    }
+    .vibe-title {
+        font-size: 3.5rem;
     }
 }
