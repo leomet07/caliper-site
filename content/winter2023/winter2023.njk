@@ -1,12 +1,9 @@
 ---
 layout: layouts/base.njk
-eleventyExcludeFromCollections: true
+title: Winter 2023 Issue
 ---
 
-{% set issuecss %}
-{% include "styles/issue.css" %}
-{% endset %}
-<style>
-    {{issuecss | cssmin | safe}}</style>
-<h1 class="center-heading">The Winter 2023 issue will be published online soon!</h1>
-{# {% set postlist = collections.winter2023 %} {% include "components/postlist.njk" %} #}
+<section>
+    {%- from 'components/viewer.macro.njk' import viewer %}
+    {{ viewer({ issue: "winter2023", max: 24, min: 1 }) }}
+</section>
